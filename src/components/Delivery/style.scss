@@ -1,0 +1,193 @@
+@import "../../styles/index";
+
+.deliveryContent {
+  width: 90%;
+  margin: 2em auto;
+  background-color: #fff6eb;
+  height: 130px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-items: stretch;
+  @include media(sm) {
+    width: 80%;
+  }
+  @include media(md) {
+    height: 140px;
+    width: 80%;
+  }
+  @include media(lg) {
+    border-radius: 20px;
+    margin: 3em auto;
+    height: 165px;
+    width: 80%;
+  }
+  @include media(xlg) {
+    border-radius: 20px;
+    margin: 3em auto;
+    height: 165px;
+    width: 80%;
+  }
+
+  &__imageContent {
+    width: 45%;
+    position: initial;
+    display: flex;
+    justify-content: center;
+    @include media(sm) {
+      width: 45%;
+      position: relative;
+    }
+    @include media(md) {
+      width: 40%;
+      position: relative;
+    }
+    @include media(lg) {
+      width: 35%;
+      position: relative;
+    }
+    @include media(xlg) {
+      width: 35%;
+      position: relative;
+    }
+
+    img {
+      width: 140px;
+      margin: auto;
+      height: auto;
+      @include media(sm) {
+        width: 160px;
+        left: 20px;
+        bottom: 0px;
+        position: absolute;
+      }
+      @include media(md) {
+        width: 150px;
+        left: 0px;
+        bottom: 0px;
+        position: absolute;
+      }
+      @include media(lg) {
+        width: 200px;
+        left: 30px;
+        bottom: 0px;
+        position: absolute;
+      }
+      @include media(xlg) {
+        width: 200px;
+        left: 30px;
+        bottom: 0px;
+        position: absolute;
+      }
+    }
+  }
+
+  &__textContent {
+    width: 65%;
+    flex-direction: column;
+    display: flex;
+    padding: 1em 1em 1em 0;
+    box-sizing: border-box;
+    @include media(sm) {
+        justify-content: center;
+        padding: 1em;
+      }
+    @include media(md) {
+      justify-content: center;
+      padding: 1em;
+    }
+    @include media(lg) {
+      justify-content: center;
+      padding: 1em;
+    }
+    @include media(xlg) {
+      justify-content: center;
+      padding: 1em;
+    }
+
+    .body {
+      flex-direction: column;
+      display: flex;
+
+      .bigtext {
+        color: #ff6122;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 0.2em;
+        @include media(md) {
+          font-size: 20px;
+        }
+        @include media(lg) {
+          font-size: 24px;
+        }
+        @include media(xlg) {
+          font-size: 24px;
+        }
+
+        img {
+          width: 18px;
+          height: 18px;
+          @include media(md) {
+            width: 20px;
+            height: 20px;
+          }
+          @include media(lg) {
+            width: 24px;
+            height: 24px;
+          }
+          @include media(xlg) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+      .disclaimer {
+        color: #c6bdb5;
+        font-size: 11px;
+        @include media(md) {
+          font-size: 11px;
+        }
+        @include media(lg) {
+          font-size: 12px;
+        }
+        @include media(xlg) {
+          font-size: 12px;
+        }
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 0.8em;
+      right: 1.5em;
+      @include media(lg) {
+        bottom: 1.2em;
+      }
+      @include media(xlg) {
+        bottom: 1.2em;
+      }
+
+      a {
+        color: #ff6122;
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+        @include media(md) {
+          font-size: 11px;
+        }
+        @include media(lg) {
+          font-size: 12px;
+        }
+        @include media(xlg) {
+          font-size: 12px;
+        }
+      }
+      img {
+        width: 10px;
+        top: 8px;
+        position: relative;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

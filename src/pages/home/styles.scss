@@ -1,0 +1,87 @@
+@import "../../styles/index";
+
+.container {
+  display: block;
+  width: 100%;
+  @include media(md) {
+    display: flex;
+  }
+  @include media(lg) {
+    display: flex;
+  }
+  @include media(xlg) {
+    display: flex;
+  }
+
+  &__content {
+    width: 100%;
+    @include media(md) {
+      width: 60%;
+    }
+    @include media(lg) {
+      width: 75%;
+    }
+    @include media(xlg) {
+      width: 75%;
+    }
+
+    &__cards {
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2em;
+      padding-bottom: 2em;
+      @include media(sm) {
+        width: 80%;
+      }
+      @include media(md) {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+      }
+      @include media(lg) {
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+      }
+      @include media(xlg) {
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+      }
+    }
+  }
+
+  &__sideBar {
+    background-color: #fdfdfb;
+    height: 100%;
+    border-left: 1px solid #f3f3ef;
+    width: 100%;
+    @include media(md) {
+      width: 40%;
+    }
+    @include media(lg) {
+      width: 25%;
+    }
+    @include media(xlg) {
+      width: 25%;
+    }
+
+    .listOrder {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 5em;
+      box-sizing: border-box;
+      @include media(sm) {
+        width: 80%;
+      }
+      @include media(md) {
+        width: 80%;
+      }
+      @include media(lg) {
+        width: 80%;
+      }
+      @include media(xlg) {
+        width: 80%;
+      }
+    }
+  }
+}

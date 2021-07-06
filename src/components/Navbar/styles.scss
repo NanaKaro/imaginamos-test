@@ -1,0 +1,44 @@
+@import "../../styles/index";
+
+.navbar {
+  display: flex;
+  width: 90%;
+  margin: 3em auto 2em auto;
+  justify-content: space-between;
+  align-items: center;
+  @include media(sm) {
+    width: 80%;
+  }
+  @include media(md) {
+    width: 80%;
+  }
+  @include media(lg) {
+    width: 80%;
+  }
+  @include media(xlg) {
+    width: 80%;
+  }
+
+  &__menu {
+    align-items: center;
+    display: flex;
+
+    label {
+      margin-left: 0.5em;
+      font-size: 14px;
+      font-weight: 600;
+      @include media(sm) {
+        font-size: 16px;
+      }
+      @include media(md) {
+        font-size: 18px;
+      }
+      @include media(lg) {
+        font-size: 18px;
+      }
+      @include media(xlg) {
+        font-size: 18px;
+      }
+    }
+  }
+}

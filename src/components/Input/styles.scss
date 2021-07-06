@@ -1,0 +1,66 @@
+@import "../../styles/index";
+
+.Input {
+  position: relative;
+  border: none;
+  height: 35px;
+  background: #f8f8f8;
+  width: -webkit-fill-available;
+  border-radius: 10px;
+  padding: 4px 4px 4px 2em;
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  @include media(md) {
+    padding: 4px 4px 4px 3em;
+  }
+  @include media(lg) {
+    padding: 4px 4px 4px 4em;
+  }
+  @include media(xlg) {
+    padding: 4px 4px 4px 4em;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &__search {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background: transparent;
+    left: 8px;
+    top: 10px;
+    @include media(md) {
+      height: 16px;
+      width: 14px;
+      left: 12px;
+    }
+    @include media(lg) {
+      height: 18px;
+      width: 18px;
+      left: 16px;
+    }
+    @include media(xlg) {
+      height: 18px;
+      width: 18px;
+      left: 16px;
+    }
+  }
+}
+
+.containerSearch {
+  position: relative;
+  box-sizing: border-box;
+  width: 60%;
+  @include media(md) {
+    width: 60%;
+  }
+  @include media(lg) {
+    width: 70%;
+  }
+  @include media(xlg) {
+    width: 70%;
+  }
+}

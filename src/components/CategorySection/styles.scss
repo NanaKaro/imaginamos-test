@@ -1,0 +1,130 @@
+@import "../../styles/index";
+
+.category {
+  width: 90%;
+  margin: 2em auto 1em auto;
+  position: relative;
+  overflow-x: hidden;
+  @include media(sm) {
+    width: 80%;
+  }
+  @include media(md) {
+    width: 80%;
+  }
+  @include media(lg) {
+    width: 80%;
+  }
+  @include media(xlg) {
+    width: 80%;
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    justify-content: space-between;
+    @include media(md) {
+      display: flex;
+    }
+    @include media(lg) {
+      display: flex;
+    }
+    @include media(xlg) {
+      display: flex;
+    }
+
+    .text {
+      display: flex;
+      align-items: center;
+
+      label {
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 0.5em;
+        @include media(sm) {
+          font-size: 22px;
+        }
+        @include media(md) {
+          font-size: 24px;
+        }
+        @include media(lg) {
+          font-size: 28px;
+        }
+        @include media(xlg) {
+          font-size: 28px;
+        }
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        @include media(sm) {
+          width: 22px;
+          height: 22px;
+        }
+        @include media(md) {
+          width: 24px;
+          height: 24px;
+        }
+        @include media(lg) {
+          width: 28px;
+          height: 28px;
+        }
+        @include media(xlg) {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: -webkit-inline-box;
+    margin: 1em 0;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 1em 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include media(sm) {
+      padding: 2em 0;
+    }
+    @include media(md) {
+      padding: 2em 0;
+    }
+    @include media(lg) {
+      padding: 2em 0;
+    }
+    @include media(xlg) {
+      padding: 2em 0;
+    }
+  }
+
+  &__seeMore {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    top: 150px;
+    @include media(sm) {
+      top: 150px;
+    }
+    @include media(md) {
+      top: 130px;
+    }
+    @include media(lg) {
+      top: 130px;
+    }
+    @include media(xlg) {
+      top: 130px;
+    }
+    img {
+      width: 15px;
+    }
+  }
+}

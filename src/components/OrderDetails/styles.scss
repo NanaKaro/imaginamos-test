@@ -1,0 +1,114 @@
+@import "../../styles/index";
+
+.orderDetails {
+  width: 90%;
+  margin: auto;
+  padding-top: 2em;
+  margin-bottom: 3em;
+  @include media(sm) {
+    width: 80%;
+  }
+  @include media(md) {
+    width: 80%;
+  }
+  @include media(lg) {
+    width: 80%;
+  }
+  @include media(xlg) {
+    width: 80%;
+  }
+
+  &__quantityContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2em;
+    @include media(sm) {
+      margin-bottom: 2em;
+    }
+    @include media(md) {
+      margin-bottom: 2em;
+    }
+    @include media(lg) {
+      margin-bottom: 3em;
+    }
+    @include media(xlg) {
+      margin-bottom: 3em;
+    }
+
+    img {
+      margin-right: 2em;
+    }
+
+    .quantity {
+      width: 35px;
+      height: 35px;
+      background-color: #ffd644;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 1.5em;
+
+    label {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    img {
+      margin-left: 0.5em;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__details {
+    background-color: #5539a3;
+    padding: 2em;
+    border-radius: 15px;
+    font-size: 13px;
+
+    .labels {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+      &--noMargin {
+        margin: 0;
+      }
+      &__image {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .timeIcon {
+          width: 30px;
+          height: 30px;
+          background-color: #66499c;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1em;
+          img {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      .white {
+        color: #fff;
+      }
+
+      .yellow {
+        color: #ffd644;
+      }
+    }
+  }
+}
