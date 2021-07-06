@@ -16,9 +16,9 @@ function Delivery() {
                 <label className="disclaimer">$0 delivery fee for orders over $10 for 30 days</label>
             </div>
             <div className="footer">
-                <a>learn more
+                <label className="link">learn more
                     <img src={ImgRight} alt="" />
-                </a>
+                </label>
             </div>
         </div>
     </div>

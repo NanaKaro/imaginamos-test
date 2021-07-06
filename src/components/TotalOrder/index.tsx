@@ -26,7 +26,7 @@ function TotalOrder() {
                 </div>
             </div>
             <div className="checkout">
-                <a href="">Checkout</a>
+                <label>Checkout</label>
                 <img src={Right} alt="" />
             </div>
         </div>

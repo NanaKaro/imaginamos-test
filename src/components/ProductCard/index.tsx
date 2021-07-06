@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./styles.scss";
-import classnames from "classnames";
 import Star from "../../assets/icons/149220.svg";
 import StarYellow from "../../assets/icons/start.svg";
 
