@@ -14,7 +14,7 @@ function OrderDetail() {
             </div>
         </div>
         <div className="orderDetails__title">
-            <label htmlFor="" className="">My 
+            <label htmlFor="" className="">My
                 <img src={Emogi} alt="" />
             </label>
             <label htmlFor="" className="orderDetails__title">Order</label>
@@ -27,14 +27,14 @@ function OrderDetail() {
             <div className="labels labels--noMargin">
                 <div className="labels__image">
                     <div className="timeIcon">
-                        <img src={Clock} alt="" /> 
+                        <img src={Clock} alt="" />
                     </div>
                     <label htmlFor="" className="white">35 min</label>
                 </div>
                  <label htmlFor="" className="yellow">Choose time</label>
             </div>
         </div>
-        
+
     </div>
   );
 }

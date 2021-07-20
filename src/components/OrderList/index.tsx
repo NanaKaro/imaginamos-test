@@ -1,20 +1,37 @@
-import React from "react";
 import "./styles.scss";
-import ImageProducto from "../../assets/images/pexels-photo-156114.jpeg"
-
+import { RootState } from "../../store/store";
+import { useSelector } from "react-redux";
+import Delete from "../../assets/icons/close.svg";
+import { useDispatch } from "react-redux";
+import { deleteItem } from "../../store/features/order/oderSlice";
 
 function OrderList() {
+  const orderItems = useSelector((state: RootState) => state.order.items);
+  const dispatch = useDispatch();
+
   return (
     <div className="orderList">
-        <div className="orderList__item">
-            <img src={ImageProducto} alt="" />
-            <div className="description">
-                <label htmlFor="" className="description__label">1</label>
-                <span className="description__label">x</span>
-                <label htmlFor="" className="description__label">Beach BBQBurger</label>
-            </div>
-            <label htmlFor="" className="price">$14.99</label>
+      {orderItems.map((item) => (
+        <div className="orderList__item" key={item.id}>
+          <img src={item.image} alt="" />
+          <div className="description">
+            <label htmlFor="" className="description__label">
+              {item.quantity}
+            </label>
+            <span className="description__label">x</span>
+            <label htmlFor="" className="description__label">
+              {item.name}
+            </label>
+          </div>
+          <label htmlFor="" className="price">
+            ${item.total}
+          </label>
+          <div className="delete">
+            <img src={Delete} alt="" onClick={() => dispatch(deleteItem(item))} />
+          </div>
+
         </div>
+      ))}
     </div>
   );
 }

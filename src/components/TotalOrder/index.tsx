@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import "./styles.scss";
 import  Right from "../../assets/icons/right.svg"
+import { RootState } from "../../store/store";
+import { useSelector } from "react-redux";
 
 function TotalOrder() {
     const [count, setCount] = useState(0);
+    const orderTotal = useSelector((state: RootState) => state.order.total);
 
     const add = () => setCount(count + 1);
     const subtract = () => setCount(count -1);
@@ -12,7 +15,7 @@ function TotalOrder() {
     <div className="totalOrder">
         <div className="totalOrder__labels">
             <label htmlFor="" className="total">Total:</label>
-            <label htmlFor="" className="priceLabel">$25.97</label>
+            <label htmlFor="" className="priceLabel">$ {orderTotal}</label>
         </div>
         <hr />
 
