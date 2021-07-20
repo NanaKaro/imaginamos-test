@@ -4,19 +4,21 @@ import Star from "../../assets/icons/149220.svg";
 import StarYellow from "../../assets/icons/start.svg";
 
 interface IProductCardProps {
-  id: number;
   image: string;
   time: string;
   title: string;
   qualification: number;
+  price: number;
+  onPress?: () => void;
 }
 
 function ProductCard({
-  id,
   image,
   time,
   title,
   qualification,
+  price,
+  onPress,
 }: IProductCardProps): JSX.Element {
   const [ifActive, setIfActive] = useState(false);
 
@@ -26,16 +28,14 @@ function ProductCard({
         <div className="time">
           <label htmlFor="">{time}</label>
         </div>
-        <img src={image} alt="" className="image" />
+        <img src={image} alt="" className="image" onClick={onPress} />
       </div>
       <div className="card__content">
         <label htmlFor="" className="titleCard">
           {title}
         </label>
         <div className="featuresContent">
-          <button
-            onClick={() => setIfActive(!ifActive)}
-          >
+          <button onClick={() => setIfActive(!ifActive)}>
             {ifActive && <img src={StarYellow} alt="" />}
             {!ifActive && <img src={Star} alt="" />}
           </button>
@@ -49,7 +49,7 @@ function ProductCard({
             • Bagels
           </label>
           <label htmlFor="" className="tags">
-            • $$
+            • ${price}
           </label>
         </div>
       </div>
