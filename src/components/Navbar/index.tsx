@@ -1,16 +1,20 @@
 import React from "react";
 import "./styles.scss";
 import Input from "../../components/Input"
-import ImgMenu from "../../assets/icons/menu.svg"
+import Menu from "../../assets/icons/menu.svg";
 
-function Navbar() {
+interface INavbarProps {
+  onMenuClick: () => void;
+}
+
+function Navbar({onMenuClick}: INavbarProps) {
   return (
     <div className="navbar">
       <div className="navbar__menu">
-        <img src={ImgMenu} alt="" />
         <label>Chukwudi</label>
       </div>
-       <Input />
+      <Input />
+      <img src={Menu} alt="" onClick={onMenuClick} />
     </div>
   );
 }
