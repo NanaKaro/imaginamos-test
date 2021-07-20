@@ -5,6 +5,8 @@
   margin: 2em auto 1em auto;
   position: relative;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
   @include media(sm) {
     width: 80%;
   }
@@ -79,8 +81,10 @@
 
   &__list {
     display: -webkit-inline-box;
+    //display: flex;
     margin: 1em 0;
     width: 100%;
+    margin: auto;
     overflow-x: scroll;
     padding: 1em 0;
     &::-webkit-scrollbar {
@@ -88,15 +92,19 @@
     }
     @include media(sm) {
       padding: 2em 0;
+      width: 100%;
     }
     @include media(md) {
       padding: 2em 0;
+      width: 80%;
     }
     @include media(lg) {
       padding: 2em 0;
+      width: 50%;
     }
     @include media(xlg) {
       padding: 2em 0;
+      width: 50%;
     }
   }
 
@@ -110,7 +118,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    top: 150px;
+    top: 130px;
     @include media(sm) {
       top: 150px;
     }
@@ -119,12 +127,24 @@
     }
     @include media(lg) {
       top: 130px;
+      right: 150px;
     }
     @include media(xlg) {
       top: 130px;
+      right: 150px;
     }
     img {
       width: 15px;
+    }
+    &--right{
+      bottom: 150px;
+      left: 0;
+      @include media(lg) {
+        left: 150px;
+      }
+      @include media(xlg) {
+        left: 150px;
+      }
     }
   }
 }
