@@ -1,39 +1,35 @@
-import { useState, useEffect } from "react";
-import classNames from "classnames";
-import Navbar from "../../components/Navbar";
-import Delivery from "../../components/Delivery";
-import CategorySection from "../../components/CategorySection";
-import ProductCard from "../../components/ProductCard";
-import OrderDetails from "../../components/OrderDetails";
-import OrderList from "../../components/OrderList";
-import TotalOrder from "../../components/TotalOrder";
-import OrderModal from "../../components/OrderModal";
-import { getProducts, IProducts } from "../../services/products";
-import { getCategories, ICategory } from "../../services/categories";
-import { RootState } from "../../store/store";
-import { useSelector } from "react-redux";
+import { useState, useEffect } from 'react';
+import classNames from 'classnames';
+import Navbar from '../../components/Navbar';
+import Delivery from '../../components/Delivery';
+import CategorySection from '../../components/CategorySection';
+import ProductCard from '../../components/ProductCard';
+import OrderDetails from '../../components/OrderDetails';
+import OrderList from '../../components/OrderList';
+import TotalOrder from '../../components/TotalOrder';
+import OrderModal from '../../components/OrderModal';
+import { getProducts, IProducts } from '../../services/products';
+import { getCategories, ICategory } from '../../services/categories';
+import { RootState } from '../../store/store';
+import { useSelector } from 'react-redux';
 
-import "./styles.scss";
+import './styles.scss';
 
-function Home() {
+function Home(): JSX.Element {
   const [products, setProducts] = useState<IProducts[]>([]);
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<IProducts[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  console.log(
-    "🚀 ~ file: index.tsx ~ line 24 ~ Home ~ isSideBarOpen",
-    isSideBarOpen
-  );
   const [categorySelected, setCategorySelected] = useState<number>(1);
   const [productSelected, setProductSelected] = useState<IProducts>();
   const orderTotal = useSelector((state: RootState) => state.order.total);
 
-  const sideBarClasses = classNames("container__sideBar", {
-    "container__sideBar--close": !isSideBarOpen,
+  const sideBarClasses = classNames('container__sideBar', {
+    'container__sideBar--close': !isSideBarOpen,
   });
-  const homeContainer = classNames("container__content", {
-    "container__content--close": !isSideBarOpen,
+  const homeContainer = classNames('container__content', {
+    'container__content--close': !isSideBarOpen,
   });
 
   useEffect(() => {
@@ -47,8 +43,8 @@ function Home() {
       setCategories(response);
     }
 
-    fetchCategories();
-    fetchProducts();
+    void fetchCategories();
+    void fetchProducts();
   }, []);
 
   useEffect(() => {

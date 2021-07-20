@@ -1,4 +1,4 @@
-@import "../../styles/index";
+@import '../../styles/index';
 
 .category {
   width: 90%;
@@ -119,6 +119,7 @@
     align-items: center;
     border-radius: 10px;
     top: 130px;
+    cursor: pointer;
     @include media(sm) {
       top: 150px;
     }
@@ -136,7 +137,7 @@
     img {
       width: 15px;
     }
-    &--right{
+    &--right {
       bottom: 150px;
       left: 0;
       @include media(lg) {
@@ -145,6 +146,9 @@
       @include media(xlg) {
         left: 150px;
       }
+    }
+    &:hover{
+    background-color: #cccccc;
     }
   }
 }

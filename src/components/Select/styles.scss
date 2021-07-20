@@ -1,29 +1,29 @@
-@import "../../styles/index";
+@import '../../styles/index';
 
-.select{
+.select {
   border: none;
   height: 35px;
   background: #ff6223;
   width: -webkit-fill-available;
   border-radius: 50px;
   padding-left: 2.5em;
-  padding-right: 1em ;
+  padding-right: 1em;
   padding-top: 4px;
   padding-bottom: 4px;
   font-size: 13px;
   color: #fff;
   background-image: url(../../assets/icons/felcha_hacia_abajo.svg);
   background-size: 10px 20px;
-	background-position: center right;
-	background-repeat: no-repeat;
+  background-position: center right;
+  background-repeat: no-repeat;
   cursor: pointer;
-	background-origin: content-box;
+  background-origin: content-box;
   appearance: none;
 
-  &:focus{
+  &:focus {
     outline: none;
   }
-  &__icon{
+  &__icon {
     position: absolute;
     height: 15px;
     width: 15px;
@@ -34,16 +34,16 @@
 
   /* Style items (options): */
   &__items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
 }
 
-.containerSelect{
+.containerSelect {
   position: relative;
   box-sizing: border-box;
   width: 60%;
@@ -61,4 +61,3 @@
     width: 35%;
   }
 }
-

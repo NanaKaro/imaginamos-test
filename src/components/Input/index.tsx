@@ -1,8 +1,8 @@
-import React from "react";
-import "./styles.scss";
-import Img from "../../assets/icons/126474.svg";
+import React from 'react';
+import './styles.scss';
+import Img from '../../assets/icons/126474.svg';
 
-function Input() {
+function Input(): JSX.Element {
   return (
     <div className="containerSearch">
       <input className="Input" placeholder="Search" />

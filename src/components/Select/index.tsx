@@ -1,16 +1,18 @@
-import React from "react";
-import "./styles.scss";
-import Img from "../../assets/icons/149316.svg"
+import React from 'react';
+import './styles.scss';
+import Img from '../../assets/icons/149316.svg';
 
-function Select() {
+function Select(): JSX.Element {
   return (
     <div className="containerSelect">
-        <select className="select">
-            <option className="option" value="0">Delivery: Now</option>
-            <option value="1">Tomorrow</option>
-            <option value="2">Soon</option>
-        </select>
-        <img className="select__icon" src={Img} alt="" ></img>
+      <select className="select">
+        <option className="option" value="0">
+          Delivery: Now
+        </option>
+        <option value="1">Tomorrow</option>
+        <option value="2">Soon</option>
+      </select>
+      <img className="select__icon" src={Img} alt=""></img>
     </div>
   );
 }

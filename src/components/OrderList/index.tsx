@@ -1,11 +1,11 @@
-import "./styles.scss";
-import { RootState } from "../../store/store";
-import { useSelector } from "react-redux";
-import Delete from "../../assets/icons/close.svg";
-import { useDispatch } from "react-redux";
-import { deleteItem } from "../../store/features/order/oderSlice";
+import './styles.scss';
+import { RootState } from '../../store/store';
+import { useSelector } from 'react-redux';
+import Delete from '../../assets/icons/close.svg';
+import { useDispatch } from 'react-redux';
+import { deleteItem } from '../../store/features/order/oderSlice';
 
-function OrderList() {
+function OrderList(): JSX.Element {
   const orderItems = useSelector((state: RootState) => state.order.items);
   const dispatch = useDispatch();
 
@@ -27,9 +27,12 @@ function OrderList() {
             ${item.total}
           </label>
           <div className="delete">
-            <img src={Delete} alt="" onClick={() => dispatch(deleteItem(item))} />
+            <img
+              src={Delete}
+              alt=""
+              onClick={() => dispatch(deleteItem(item))}
+            />
           </div>
-
         </div>
       ))}
     </div>

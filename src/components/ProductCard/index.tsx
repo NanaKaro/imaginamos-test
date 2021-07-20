@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./styles.scss";
-import Star from "../../assets/icons/149220.svg";
-import StarYellow from "../../assets/icons/start.svg";
+import React, { useState } from 'react';
+import './styles.scss';
+import Star from '../../assets/icons/149220.svg';
+import StarYellow from '../../assets/icons/start.svg';
 
 interface IProductCardProps {
   image: string;

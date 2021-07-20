@@ -1,16 +1,16 @@
-import { useState } from "react";
-import UIModal from "react-modal";
-import "./style.scss";
-import { IProducts } from "../../services/products";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../store/features/order/oderSlice";
+import { useState } from 'react';
+import UIModal from 'react-modal';
+import './style.scss';
+import { IProducts } from '../../services/products';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../store/features/order/oderSlice';
 
-UIModal.setAppElement("#root");
+UIModal.setAppElement('#root');
 interface IModalProps extends UIModal.Props {
   product: IProducts;
 }
 
-function Modal({ product, ...rest }: IModalProps) {
+function Modal({ product, ...rest }: IModalProps): JSX.Element {
   const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
 
@@ -49,8 +49,7 @@ function Modal({ product, ...rest }: IModalProps) {
       <div className="modal__footer">
         <button
           onClick={() => dispatch(addItem(createItemOrder()))}
-          disabled={quantity <= 0}
-        >
+          disabled={quantity <= 0}>
           Hacer pedido
         </button>
       </div>

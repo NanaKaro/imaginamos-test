@@ -5,13 +5,11 @@ export interface ICategory {
 }
 
 interface IGetCategories {
-  (): Promise<ICategory[]>
+  (): Promise<ICategory[]>;
 }
 
 export const getCategories: IGetCategories = async () => {
   const response = await fetch('/data/categories.json');
-  const categories = await response.json();
+  const categories = (await response.json()) as ICategory[];
   return categories;
-}
-
-
+};

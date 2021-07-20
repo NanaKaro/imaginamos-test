@@ -1,21 +1,19 @@
 export interface IProducts {
-  id: number,
-  name: string,
-  qualification: number,
-  time: string,
-  price: number,
-  image: string,
+  id: number;
+  name: string;
+  qualification: number;
+  time: string;
+  price: number;
+  image: string;
   categoryId: number;
 }
 
 interface IGetProducts {
-  (): Promise<IProducts[]>
+  (): Promise<IProducts[]>;
 }
 
 export const getProducts: IGetProducts = async () => {
   const response = await fetch('/data/products.json');
-  const products = await response.json();
+  const products = (await response.json()) as IProducts[];
   return products;
-}
-
-
+};

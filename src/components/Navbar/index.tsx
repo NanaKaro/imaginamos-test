@@ -1,13 +1,13 @@
-import React from "react";
-import "./styles.scss";
-import Input from "../../components/Input"
-import Menu from "../../assets/icons/menu.svg";
+import React from 'react';
+import './styles.scss';
+import Input from '../../components/Input';
+import Menu from '../../assets/icons/menu.svg';
 
 interface INavbarProps {
   onMenuClick: () => void;
 }
 
-function Navbar({onMenuClick}: INavbarProps) {
+function Navbar({ onMenuClick }: INavbarProps): JSX.Element {
   return (
     <div className="navbar">
       <div className="navbar__menu">

@@ -1,4 +1,4 @@
-@import "../../styles/index";
+@import '../../styles/index';
 
 .navbar {
   display: flex;
@@ -19,7 +19,7 @@
     width: 80%;
   }
 
-  img{
+  img {
     display: none;
     cursor: pointer;
     @include media(md) {
