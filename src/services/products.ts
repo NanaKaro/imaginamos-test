@@ -5,6 +5,7 @@ export interface IProducts {
   time: string,
   price: number,
   image: string,
+  categoryId: number;
 }
 
 interface IGetProducts {
