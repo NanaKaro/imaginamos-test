@@ -5,9 +5,6 @@
   "trailingComma": "es5",
   "arrowParens": "always",
   "semi": true,
-  "newline-before-return": true,
-  "no-duplicate-variable": [true, "check-parameters"],
-  "no-var-keyword": true,
   "overrides": [
     {
       "files": "*.{js,jsx,tsx,ts}",

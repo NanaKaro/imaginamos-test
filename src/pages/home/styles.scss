@@ -77,9 +77,18 @@
 
     &--close {
       overflow: hidden;
-      width: 0%;
+      width: 100%;
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
+      @include media(md) {
+        width: 0%;
+      }
+      @include media(lg) {
+        width: 0%;
+      }
+      @include media(xlg) {
+        width: 0%;
+      }
     }
 
     .listOrder {

@@ -23,7 +23,7 @@ function ProductCard({
   const [ifActive, setIfActive] = useState(false);
 
   return (
-    <div className="card">
+    <div className="card btn-green-tr">
       <div className="card__image">
         <div className="time">
           <label htmlFor="">{time}</label>

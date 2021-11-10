@@ -7,11 +7,17 @@
   flex-direction: column;
   background-color: #fff;
   border-radius: 50px;
-  margin-right: 1em;
-  box-shadow: 5px 5px 20px 5px rgba(gray, 0.05);
+  margin-right: 1.5em;
+  box-shadow: 5px 5px 20px 5px rgba(gray, 0.1);
   border: none;
+
   align-items: center;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
   padding: 0;
+
   @include media(md) {
     width: 70px;
     height: 120px;
@@ -23,6 +29,50 @@
   @include media(xlg) {
     width: 70px;
     height: 120px;
+  }
+
+  &::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(60px + 8px);
+    min-height: calc(100px + 8px);
+    border: 4px solid #ffd543;
+    box-shadow: 0 0 10px #ffd543;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+    @include media(md) {
+      min-width: calc(70px + 8px);
+      min-height: calc(120px + 8px);
+    }
+    @include media(lg) {
+      min-width: calc(70px + 8px);
+      min-height: calc(120px + 8px);
+    }
+    @include media(xlg) {
+      min-width: calc(70px + 8px);
+      min-height: calc(120px + 8px);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    animation: none;
+    display: none;
   }
 
   &__image {
@@ -64,6 +114,7 @@
     }
   }
 }
+
 .active {
   background-color: #ffd543;
 }

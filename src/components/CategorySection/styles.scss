@@ -86,24 +86,24 @@
     width: 100%;
     margin: auto;
     overflow-x: scroll;
-    padding: 1em 0;
+    padding: 2em 1em 1em 1em;
     &::-webkit-scrollbar {
       display: none;
     }
     @include media(sm) {
-      padding: 2em 0;
+      padding: 2em 1em;
       width: 100%;
     }
     @include media(md) {
-      padding: 2em 0;
+      padding: 2em 1em;
       width: 80%;
     }
     @include media(lg) {
-      padding: 2em 0;
+      padding: 2em 1em;
       width: 50%;
     }
     @include media(xlg) {
-      padding: 2em 0;
+      padding: 2em 1em;
       width: 50%;
     }
   }
@@ -114,7 +114,7 @@
     width: 30px;
     height: 30px;
     background-color: #f8f8f8;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -122,17 +122,21 @@
     cursor: pointer;
     @include media(sm) {
       top: 150px;
+      display: none;
     }
     @include media(md) {
       top: 130px;
+      display: flex;
     }
     @include media(lg) {
       top: 130px;
       right: 150px;
+      display: flex;
     }
     @include media(xlg) {
       top: 130px;
       right: 150px;
+      display: flex;
     }
     img {
       width: 15px;
@@ -140,6 +144,7 @@
     &--right {
       bottom: 150px;
       left: 0;
+      z-index: 1;
       @include media(lg) {
         left: 150px;
       }
@@ -147,8 +152,8 @@
         left: 150px;
       }
     }
-    &:hover{
-    background-color: #cccccc;
+    &:hover {
+      background-color: #cccccc;
     }
   }
 }

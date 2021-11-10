@@ -7,12 +7,27 @@
 
   &__image {
     display: flex;
-    position: relative;
     margin-bottom: 1em;
+    overflow: hidden;
+    position: relative !important;
+    background: #3e2723;
+    border-radius: 20px;
     img {
       border-radius: 20px;
       object-fit: cover;
       margin: auto;
+      max-width: 100%;
+      top: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      border-radius: 5px;
+      &:hover {
+        top: -30px;
+        -webkit-transform: rotate(-5deg) scale(2);
+        -ms-transform: rotate(-5deg) scale(2);
+        -o-transform: rotate(-5deg) scale(2);
+        transform: rotate(-5deg) scale(2);
+      }
     }
     .image {
       width: 100%;
@@ -31,6 +46,7 @@
       position: absolute;
       bottom: 0px;
       font-weight: 600;
+      z-index: 1;
       @include media(md) {
         width: 50%;
       }
